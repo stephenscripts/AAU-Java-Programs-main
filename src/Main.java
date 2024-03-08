@@ -4,13 +4,16 @@ import java.util.Scanner;
 public class Main {
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
-            double r, a;
-            System.out.println("Radius: ");
-            r = in.nextDouble();
-            final double pi = 22.0/7.0;
-            a = pi * r * r;
+        double r, a;
+        System.out.println("Radius: ");
+        r = in.nextDouble();
+        final double pi = 22.0/7.0;
+        a = pi * r * r;
 
-            System.out.println("The Area of the circle with radius " + r + ": " + a);
+        System.out.println("The Area of the circle with radius " + r + ": " + a);
+
+        double testFloat = 1.56E-7;
+        System.out.println(testFloat);
 
 
     }
