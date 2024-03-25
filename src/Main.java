@@ -30,7 +30,8 @@ public class Main {
 
         //xTry();
         //fibunacci();
-        zeroMaxNumbers();
+        //zeroMaxNumbers();
+        frequency();
 
 
     }
@@ -161,6 +162,27 @@ public class Main {
     }
 
     public static void frequency(){
-        
+        Scanner scanner = new Scanner(System.in);
+        long in = scanner.nextLong();
+
+        int[] digits = new int[10];
+
+        if (in < 0){
+            System.out.println("Only Positive Long values are allowed\n\nPress Enter to exit");
+            System.exit(0);
+        }else {
+            for (int i = 0; in >= 1; i++){
+                int x;
+                long y = in%10;
+                in = in/10;
+                x = (int)y;
+                digits[x] += 1;
+            }
+            for (int i = digits.length -1; i >= 0; i--){
+                //System.out.println(digits[i]);
+                if (digits[i] > 0)
+                    System.out.println(i + " occurs " + digits[i] + " time(s)");
+            }
+        }
     }
 }
